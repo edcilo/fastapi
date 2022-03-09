@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  fastapi:
+    container_name: fastapi
+    build: .
+    ports:
+      - 8080:8000
+    volumes:
+      - ./:/app
+    environment:
+      - FASTAPI_ENV=development
